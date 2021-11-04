@@ -59,7 +59,7 @@ package ru.netology.domain;
         }
 
         public void decreaseVolume() {
-            if (currentVolume < 0) {
+            if (currentVolume > 0) {
                 currentVolume = currentVolume - 1;
             }
         }
