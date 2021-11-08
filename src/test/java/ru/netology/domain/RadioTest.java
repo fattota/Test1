@@ -87,16 +87,6 @@ class RadioTest {
         assertEquals(expected, actual);
     }
 
-
-    @Test
-    void shouldCheckSetStationNumber() {
-        Radio radio = new Radio();
-        radio.setStationNumber();
-        int expected = 4;
-        int actual = radio.getCurrentStation();
-        assertEquals(expected, actual);
-    }
-
     @Test
     void shouldCheckSwitchToNextWithinTheLimit() {
         Radio radio = new Radio();
@@ -130,7 +120,7 @@ class RadioTest {
     @Test
     void shouldCheckSwitchToPrevOverLimit() {
         Radio radio = new Radio();
-        radio.setCurrentStation(22);
+        radio.setCurrentStation(0);
         radio.switchToPrev();
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -216,3 +206,4 @@ class RadioTest {
     }
 
 }
+
